@@ -1,0 +1,93 @@
+version: "3.1"
+
+#####################################################
+# Intents
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_time 
+  - ask_date
+  - thank_you 
+  - introduce
+  - tasks 
+  - ask_date_time 
+
+#####################################################
+# Entities
+
+
+#####################################################
+# Slots
+
+slots:
+   time:
+    type: text
+    mappings:
+      - type: from_text
+   date:
+    type: text
+    mappings:
+      - type: from_text
+
+#####################################################
+# Actions
+
+actions:
+  - action_get_time 
+  - action_get_date
+  - action_current_date_time
+  - action_time_based_greeting
+  
+
+
+
+#####################################################
+# Responses
+
+responses:
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_time:
+  - text: "The current time is {time}"
+
+  utter_date:
+  - text: "Today's date is {date}."
+
+  utter_date_time:
+    - text: "The current date and time is {current_time}."
+
+  utter_thank_you:  # New response for thanking the user
+  - text: "You're welcome! I'm glad I could help you."
+  - text: "No problem at all! If you need anything else, just ask."
+  - text: "Happy to help! Let me know if you have any more questions."
+  - text: "Thanks for your kind words! I'm here to assist you."
+
+  utter_introduce:
+    - text: "I am GRCensi, your GRC specialist bot."
+    - text: "GRCensi, I can help you with GRC related questions and topics."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

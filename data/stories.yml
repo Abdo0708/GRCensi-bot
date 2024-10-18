@@ -1,0 +1,220 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+    - intent: greet
+    - action: action_time_based_greeting
+    - intent: mood_great
+    - action: utter_happy
+
+- story: sad path 1
+  steps:
+    - intent: greet
+    - action: action_time_based_greeting
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+
+- story: sad path 2
+  steps:
+    - intent: greet
+    - action: action_time_based_greeting
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: Greet user based on time and ask for date
+  steps:
+    - intent: greet
+    - action: action_time_based_greeting
+    - intent: ask_date
+    - action: action_get_date
+
+## TIME ##
+- story: ask for current time formally
+  steps:
+    - intent: ask_time
+    - entities:
+        - time_query: "What time is it?"
+    - action: action_get_time
+
+- story: ask for time informally
+  steps:
+    - intent: ask_time
+    - entities:
+        - time_query: "What's the time now?"
+    - action: action_get_time
+
+- story: ask for time with shortcuts
+  steps:
+    - intent: ask_time
+    - entities:
+        - time_query: "Time?"
+    - action: action_get_time
+
+- story: ask for time using polite request
+  steps:
+    - intent: ask_time
+    - entities:
+        - time_query: "Can you tell me the time?"
+    - action: action_get_time
+
+- story: ask time in an informal query
+  steps:
+    - intent: ask_time
+    - entities:
+        - time_query: "Yo, what time is it?"
+    - action: action_get_time
+
+- story: ask time using a casual request
+  steps:
+    - intent: ask_time
+    - entities:
+        - time_query: "Got the time?"
+    - action: action_get_time
+
+- story: ask time using a simple phrase
+  steps:
+    - intent: ask_time
+    - entities:
+        - time_query: "What time we got?"
+    - action: action_get_time
+
+- story: ask time using another formal request
+  steps:
+    - intent: ask_time
+    - entities:
+        - time_query: "Could you please tell me the current time?"
+    - action: action_get_time
+
+- story: ask time using a very brief query
+  steps:
+    - intent: ask_time
+    - entities:
+        - time_query: "Now?"
+    - action: action_get_time
+
+- story: user asks for the date
+  steps:
+    - intent: ask_date
+    - action: action_get_date
+
+- story: user asks for the date in different wording
+  steps:
+    - intent: ask_date
+    - action: action_get_date
+
+- story: user asks for the date informally
+  steps:
+    - intent: ask_date
+    - action: action_get_date
+
+- story: user asks for the date after greeting
+  steps:
+    - intent: greet
+    - action: action_time_based_greeting
+    - intent: ask_date
+    - action: action_get_date
+
+- story: user inquires about the date with a follow-up question
+  steps:
+    - intent: ask_date
+    - action: action_get_date
+    - intent: affirm
+    - action: utter_did_that_help
+
+- story: user expresses mood and asks for the date
+  steps:
+    - intent: mood_great
+    - action: utter_happy
+    - intent: ask_date
+    - action: action_get_date
+
+- story: user asks for the date in an urgent manner
+  steps:
+    - intent: ask_date
+    - action: action_get_date
+
+- story: user asks for the date twice in a row
+  steps:
+    - intent: ask_date
+    - action: action_get_date
+    - intent: ask_date
+    - action: action_get_date
+
+- story: user asks for the date with additional context
+  steps:
+    - intent: ask_date
+    - action: action_get_date
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+- story: user asks for date and time
+  steps:
+    - intent: ask_date_time
+    - action: action_current_date_time
+
+- story: ask time and thank you
+  steps:
+    - intent: ask_time
+    - action: action_get_time
+    - intent: thank_you
+    - action: utter_thank_you
+
+- story: ask date and thank you
+  steps:
+    - intent: ask_date
+    - action: action_get_date
+    - intent: thank_you
+    - action: utter_thank_you
+
+- story: greet and ask for time
+  steps:
+    - intent: greet
+    - action: action_time_based_greeting
+    - intent: ask_time
+    - action: action_get_time
+    - intent: thank_you
+    - action: utter_thank_you
+
+- story: greet and ask for date
+  steps:
+    - intent: greet
+    - action: action_time_based_greeting
+    - intent: ask_date
+    - action: action_get_date
+    - intent: thank_you
+    - action: utter_thank_you
+
+- story: bot explanation and thank you
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+    - intent: thank_you
+    - action: utter_thank_you
+
+- story: ask mood and thank you
+  steps:
+    - intent: mood_great
+    - action: utter_happy
+    - intent: thank_you
+    - action: utter_thank_you
+
+- story: handle goodbye and thank you
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+    - intent: thank_you
+    - action: utter_thank_you
+
+- story: introduction story
+  steps:
+    - intent: introduce
+    - action: utter_introduce
+

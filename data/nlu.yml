@@ -1,0 +1,252 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - what's up
+    - yo
+    - howdy
+    - hi there
+    - greetings
+    - salut
+    - hola
+    - hi everyone
+    - good to see you
+    - nice to meet you
+    - long time no see
+    - how's it going
+    - how are you
+    - what's happening
+    - hi, bot
+    - hello, bot
+    - hey, what's up
+    - morning
+    - evening
+    - hi friend
+    - hi buddy
+    - hey team
+    - how’s everything
+    - hey mate
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_time 
+  examples: |
+    - What time is it?
+    - Can you tell me the time?
+    - What's the current time?
+    - Please tell me the time.
+    - Time check.
+    - Do you know the time?
+    - Whats the time now?
+    - Whats the time?
+    - Could you let me know the time?
+    - I'm curious about the time.
+    - Can you give me the time, please?
+    - Right now, what time is it?
+    - Is it time?
+    - Any idea what time it is?
+    - Time?
+    - Whats the hour?
+    - What time do you have?
+    - What time do we have?
+    - Please, whats the time?
+    - Time right now?
+    - Current time?
+    - Can you check the time?
+    - Show me the time.
+    - What hour is it?
+    - Whats the time on your clock?
+    - Let me know the time.
+    - I need to know the time.
+    - Can I have the time?
+    - Give me the time.
+    - Now, what time is it?
+    - Whats the clock say?
+    - Is it late?
+    - Am I late? What time is it?
+    - Do you have the time?
+    - Whats the time, buddy?
+    - What time are we looking at?
+    - How late is it?
+    - What’s the exact time?
+    - What’s the time looking like?
+    - What's the current hour?
+    - Could you tell me what time it is?
+    - What time is it right now?
+    - What time do you think it is?
+    - Time please 
+    - What time is it now?
+    - What time is it currently?
+    - What time is it at the moment?
+
+- intent: ask_date
+  examples: |
+    - What's the date?
+    - Can you tell me the date?
+    - What is today’s date?
+    - Tell me the date.
+    - Please provide the date.
+    - I want to know the date.
+    - What day is it?
+    - Could you let me know the date?
+    - What's today's date?
+    - Give me the date.
+    - What date is it?
+    - Can you tell me today's date?
+    - Do you know what date it is?
+    - I need to know the date.
+    - Please tell me what the date is.
+    - What is the current date?
+    - What's the date today?
+    - Can you check the date for me?
+    - What date are we on?
+    - What is the date right now?
+    - Let me know the date, please.
+    - What date is it today?
+    - What date is it currently?
+
+- intent: ask_date_time
+  examples: |
+    - what's the date and time please?
+    - can you tell me the current date and time?
+    - what time is it?
+    - what's the current time?
+    - can you give me the date and time?
+    - what's the date and time?
+
+- intent: thank_you
+  examples: |
+    - Thank you
+    - Thanks
+    - Thanks a lot
+    - I appreciate it
+    - Thank you very much
+    - Thanks for your help
+    - I’m grateful
+    - Thank you for that
+    - Cheers!
+    - Many thanks!
+    - I'm so thankful
+    - Thank you kindly
+    - Thanks a million
+    - I really appreciate your help
+    - Thanks for everything
+    - You’ve been a great help
+    - I owe you one
+    - I can’t thank you enough
+    - You're awesome, thanks!
+    - Thank you for your assistance
+    - That's very kind of you, thank you
+    - You made my day, thanks!
+    - Thanks for your support
+    - I appreciate your help with this
+    - Thanks for taking the time
+    - You are a lifesaver, thank you!
+    - I really appreciate your kindness
+    - You’re the best, thanks!
+    - Thanks, I really needed that
+    - I'm thankful for your help
+    - Thanks, it means a lot to me
+
+- intent: introduce
+  examples: |
+      - who are you?
+      - tell me about yourself
+      - what is your purpose?
+      - can you introduce yourself?
+      - give me some information about you
+      - what do you specialize in?
+      - what's your name?
+      - how would you describe yourself?
+      - what makes you unique?
+      - what type of bot are you?
+      - who created you?
+      - what is your background?
+
+
+  
